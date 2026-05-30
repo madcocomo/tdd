@@ -1,0 +1,50 @@
+---
+layout: default
+title: 首页
+---
+
+{% assign entries = site.article | concat: site.tips | concat: site.book_review | sort: 'date' | reverse %}
+
+<p>欢迎来到我的 blog。</p>
+
+<h2>全部文章</h2>
+<ul>
+  {% for entry in entries %}
+    <li>
+      <span>{{ entry.date | date: "%Y-%m-%d" }}</span>
+      <strong>[{{ entry.category_label }}]</strong>
+      <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2>分类导航</h2>
+<ul>
+  <li><a href="#articles">随笔</a>（{{ site.article | size }}）</li>
+  <li><a href="#tips">点滴</a>（{{ site.tips | size }}）</li>
+  <li><a href="#book-reviews">读书笔记</a>（{{ site.book_review | size }}）</li>
+</ul>
+
+<h3 id="articles">随笔</h3>
+<ul>
+  {% assign articles = site.article | sort: 'date' | reverse %}
+  {% for entry in articles %}
+    <li><span>{{ entry.date | date: "%Y-%m-%d" }}</span> <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h3 id="tips">点滴</h3>
+<ul>
+  {% assign tips = site.tips | sort: 'date' | reverse %}
+  {% for entry in tips %}
+    <li><span>{{ entry.date | date: "%Y-%m-%d" }}</span> <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h3 id="book-reviews">读书笔记</h3>
+<ul>
+  {% assign book_reviews = site.book_review | sort: 'date' | reverse %}
+  {% for entry in book_reviews %}
+    <li><span>{{ entry.date | date: "%Y-%m-%d" }}</span> <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a></li>
+  {% endfor %}
+</ul>

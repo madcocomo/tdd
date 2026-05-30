@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+source "$(dirname "$0")/_env.sh"
+
+BUILD_DIR="$ROOT_DIR/tmp/site-check"
+rm -rf "$BUILD_DIR"
+"$(dirname "$0")/build" --destination "$BUILD_DIR" >/dev/null
+
+test -f "$BUILD_DIR/index.html"
+test -f "$BUILD_DIR/article/TDD生存手册.html"
+test -f "$BUILD_DIR/tips/改善参数过多的方法.html"
+test -f "$BUILD_DIR/book-review/2016-读书记录.html"
+grep -q '全部文章' "$BUILD_DIR/index.html"
+grep -q '/article/' "$BUILD_DIR/index.html"
+grep -q '/tips/' "$BUILD_DIR/index.html"
+grep -q '/book-review/' "$BUILD_DIR/index.html"
+echo "site check passed"

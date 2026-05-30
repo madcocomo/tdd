@@ -1,2 +1,35 @@
 title: 软件开发与教练
+description: blog
 theme: jekyll-theme-slate
+collections:
+  article:
+    output: true
+    permalink: /article/:name.html
+  tips:
+    output: true
+    permalink: /tips/:name.html
+  book_review:
+    output: true
+    permalink: /book-review/:name.html
+defaults:
+  - scope:
+      path: ""
+      type: article
+    values:
+      layout: default
+      category_label: 随笔
+  - scope:
+      path: ""
+      type: tips
+    values:
+      layout: default
+      category_label: 点滴
+  - scope:
+      path: ""
+      type: book_review
+    values:
+      layout: default
+      category_label: 读书笔记
+exclude:
+  - vendor
+  - tmp
