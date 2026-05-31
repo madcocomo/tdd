@@ -33,3 +33,5 @@ defaults:
 exclude:
   - vendor
   - tmp
+  - .blog-agent
+  - AGENTS.md

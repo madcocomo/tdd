@@ -1,0 +1,140 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">代码就是一种Harness 封面图</title>
+  <desc id="desc">左侧是模糊的抽象信息团块，中间是代码面板构成的桥，右侧是清晰收敛的结果卡片，表达代码把开放问题收束成可执行结果。</desc>
+  <defs>
+    <linearGradient id="bg" x1="140" y1="80" x2="1480" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A0F1F"/>
+      <stop offset="0.55" stop-color="#111827"/>
+      <stop offset="1" stop-color="#0D1326"/>
+    </linearGradient>
+    <radialGradient id="leftGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(280 420) rotate(14) scale(420 300)">
+      <stop stop-color="#7C3AED" stop-opacity="0.34"/>
+      <stop offset="0.55" stop-color="#22D3EE" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rightGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1260 410) rotate(-8) scale(330 260)">
+      <stop stop-color="#22D3EE" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="470" y1="450" x2="1220" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="0.45" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#7DD3FC"/>
+    </linearGradient>
+    <linearGradient id="cardStroke" x1="1010" y1="240" x2="1420" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.65"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="white" stroke-opacity="0.05"/>
+    </pattern>
+    <filter id="blur20" x="-80" y="-80" width="1760" height="1060" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="blur48" x="-120" y="-120" width="1840" height="1140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="48"/>
+    </filter>
+    <filter id="glow" x="368" y="223" width="904" height="454" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="shadow" x="530" y="220" width="560" height="460" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feOffset dy="16"/>
+      <feGaussianBlur stdDeviation="20"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.121569 0 0 0 0 0.239216 0 0 0 0.38 0"/>
+      <feBlend in2="SourceGraphic" mode="normal"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="900" rx="28" fill="url(#grid)"/>
+  <rect width="1600" height="900" rx="28" fill="url(#leftGlow)"/>
+  <rect width="1600" height="900" rx="28" fill="url(#rightGlow)"/>
+
+  <!-- left diffuse cluster -->
+  <g filter="url(#blur48)" opacity="0.9">
+    <circle cx="255" cy="470" r="118" fill="#8B5CF6" fill-opacity="0.32"/>
+    <circle cx="370" cy="340" r="86" fill="#22D3EE" fill-opacity="0.26"/>
+    <circle cx="420" cy="565" r="96" fill="#38BDF8" fill-opacity="0.22"/>
+    <rect x="164" y="292" width="218" height="124" rx="42" transform="rotate(-14 164 292)" fill="#C084FC" fill-opacity="0.2"/>
+    <rect x="255" y="505" width="248" height="136" rx="48" transform="rotate(12 255 505)" fill="#22D3EE" fill-opacity="0.18"/>
+  </g>
+
+  <g filter="url(#blur20)" opacity="0.5">
+    <path d="M220 433C289 379 356 363 450 390" stroke="#E879F9" stroke-width="16" stroke-linecap="round"/>
+    <path d="M238 518C312 565 388 584 470 560" stroke="#22D3EE" stroke-width="14" stroke-linecap="round"/>
+    <path d="M206 363C258 326 318 300 398 302" stroke="#A78BFA" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- bridge -->
+  <g filter="url(#glow)" opacity="0.75">
+    <path d="M470 450H1120" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="515" cy="450" r="8" fill="#8B5CF6"/>
+    <circle cx="792" cy="450" r="10" fill="#22D3EE"/>
+    <circle cx="1084" cy="450" r="8" fill="#7DD3FC"/>
+  </g>
+
+  <!-- center code bridge panel -->
+  <g filter="url(#shadow)">
+    <rect x="575" y="244" width="450" height="412" rx="28" fill="#0F172A" fill-opacity="0.96"/>
+    <rect x="575.75" y="244.75" width="448.5" height="410.5" rx="27.25" stroke="url(#cardStroke)" stroke-opacity="0.42" stroke-width="1.5"/>
+    <rect x="604" y="278" width="392" height="46" rx="16" fill="#111D34"/>
+    <circle cx="637" cy="301" r="6" fill="#F472B6" fill-opacity="0.8"/>
+    <circle cx="661" cy="301" r="6" fill="#FBBF24" fill-opacity="0.8"/>
+    <circle cx="685" cy="301" r="6" fill="#34D399" fill-opacity="0.85"/>
+    <rect x="723" y="293" width="116" height="15" rx="7.5" fill="#94A3B8" fill-opacity="0.18"/>
+
+    <g opacity="0.95">
+      <rect x="625" y="366" width="72" height="14" rx="7" fill="#A78BFA"/>
+      <rect x="710" y="366" width="198" height="14" rx="7" fill="#E2E8F0" fill-opacity="0.18"/>
+      <rect x="625" y="404" width="118" height="14" rx="7" fill="#22D3EE"/>
+      <rect x="756" y="404" width="164" height="14" rx="7" fill="#E2E8F0" fill-opacity="0.18"/>
+      <rect x="650" y="442" width="87" height="14" rx="7" fill="#94A3B8" fill-opacity="0.4"/>
+      <rect x="748" y="442" width="208" height="14" rx="7" fill="#E2E8F0" fill-opacity="0.14"/>
+      <rect x="650" y="480" width="120" height="14" rx="7" fill="#A78BFA" fill-opacity="0.76"/>
+      <rect x="782" y="480" width="145" height="14" rx="7" fill="#E2E8F0" fill-opacity="0.18"/>
+      <rect x="650" y="518" width="94" height="14" rx="7" fill="#22D3EE" fill-opacity="0.82"/>
+      <rect x="759" y="518" width="173" height="14" rx="7" fill="#E2E8F0" fill-opacity="0.14"/>
+      <rect x="625" y="572" width="350" height="2" rx="1" fill="#67E8F9" fill-opacity="0.55"/>
+      <circle cx="957" cy="573" r="6" fill="#67E8F9"/>
+    </g>
+  </g>
+
+  <!-- transition particles -->
+  <g opacity="0.7">
+    <circle cx="503" cy="392" r="5" fill="#C084FC" fill-opacity="0.5"/>
+    <circle cx="537" cy="416" r="4" fill="#A78BFA" fill-opacity="0.65"/>
+    <circle cx="1080" cy="376" r="4" fill="#67E8F9" fill-opacity="0.8"/>
+    <circle cx="1114" cy="404" r="5" fill="#7DD3FC" fill-opacity="0.85"/>
+  </g>
+
+  <!-- right crisp result cards -->
+  <g>
+    <rect x="1115" y="248" width="250" height="136" rx="24" fill="#0E1A30" fill-opacity="0.96"/>
+    <rect x="1115.75" y="248.75" width="248.5" height="134.5" rx="23.25" stroke="url(#cardStroke)" stroke-width="1.5"/>
+    <circle cx="1171" cy="316" r="26" fill="#082F49" stroke="#67E8F9" stroke-width="2"/>
+    <path d="M1159 316L1168 325L1184 307" stroke="#67E8F9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="1215" y="290" width="102" height="12" rx="6" fill="#E2E8F0" fill-opacity="0.2"/>
+    <rect x="1215" y="314" width="132" height="12" rx="6" fill="#67E8F9" fill-opacity="0.82"/>
+    <rect x="1215" y="338" width="88" height="12" rx="6" fill="#E2E8F0" fill-opacity="0.14"/>
+
+    <rect x="1078" y="425" width="324" height="94" rx="24" fill="#0E1A30" fill-opacity="0.94"/>
+    <rect x="1078.75" y="425.75" width="322.5" height="92.5" rx="23.25" stroke="url(#cardStroke)" stroke-width="1.5" stroke-opacity="0.8"/>
+    <rect x="1120" y="456" width="42" height="32" rx="10" fill="#0B2942"/>
+    <path d="M1136 473H1146" stroke="#67E8F9" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1141 468V478" stroke="#67E8F9" stroke-width="3" stroke-linecap="round"/>
+    <rect x="1188" y="452" width="164" height="12" rx="6" fill="#E2E8F0" fill-opacity="0.18"/>
+    <rect x="1188" y="476" width="186" height="12" rx="6" fill="#A78BFA" fill-opacity="0.75"/>
+
+    <g transform="translate(1114 579)">
+      <rect x="0" y="0" width="42" height="126" rx="18" fill="#0E1A30" stroke="#334155"/>
+      <rect x="62" y="24" width="42" height="102" rx="18" fill="#10233F" stroke="#475569"/>
+      <rect x="124" y="52" width="42" height="74" rx="18" fill="#123053" stroke="#67E8F9" stroke-opacity="0.45"/>
+      <rect x="186" y="32" width="42" height="94" rx="18" fill="#133A62" stroke="#67E8F9" stroke-opacity="0.6"/>
+      <rect x="248" y="12" width="42" height="114" rx="18" fill="#164E7A" stroke="#67E8F9" stroke-opacity="0.75"/>
+    </g>
+  </g>
+
+  <!-- subtle frame -->
+  <rect x="18" y="18" width="1564" height="864" rx="22" stroke="white" stroke-opacity="0.08"/>
+</svg>
