@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23040a18'/%3E%3Cpath d='M16 34c0-10 7-18 16-18 8 0 15 6 15 14 0 6-4 10-11 10h-8v8h-8v-14h16c3 0 5-2 5-5 0-4-4-7-9-7-6 0-10 5-10 12H16Z' fill='%2359d8ff'/%3E%3C/svg%3E"
+    />
+    <title>Snake FPS</title>
+    <script type="module" crossorigin src="/snake-fps/assets/index-BsWhx1JN.js"></script>
+    <link rel="stylesheet" crossorigin href="/snake-fps/assets/index-lcBHiLHU.css">
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <canvas
+        id="scene-canvas"
+        class="scene-canvas"
+        aria-label="Snake FPS 3D 场景"
+      ></canvas>
+
+      <section class="hud-panel hud-panel--left" aria-live="polite">
+        <div class="hud-card stats-card">
+          <p class="hud-label">Snake FPS</p>
+          <div class="stats-grid">
+            <div>
+              <p class="stat-name">分数</p>
+              <p class="stat-value" data-role="score">0</p>
+            </div>
+            <div>
+              <p class="stat-name">长度</p>
+              <p class="stat-value" data-role="length">4</p>
+            </div>
+            <div>
+              <p class="stat-name">速度</p>
+              <p class="stat-value" data-role="speed">3.1 格/秒</p>
+            </div>
+            <div>
+              <p class="stat-name">最高分</p>
+              <p class="stat-value" data-role="high-score">0</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hud-panel hud-panel--right">
+        <div class="hud-card minimap-card">
+          <div class="minimap-header">
+            <p class="hud-label">Mini Map</p>
+            <p class="minimap-subtitle">边界 / 身体 / 食物</p>
+          </div>
+          <canvas
+            id="minimap-canvas"
+            class="minimap-canvas"
+            width="220"
+            height="220"
+            aria-label="Snake FPS 小地图"
+          ></canvas>
+        </div>
+      </section>
+
+      <div class="touch-controls" data-role="touch-controls" aria-label="触屏控制按钮">
+        <button data-role="primary-action" aria-label="开始">▶</button>
+        <button data-role="pause-toggle" aria-label="暂停">⏸</button>
+      </div>
+
+      <div class="status-strip" data-role="status-hint">
+        <span class="status-strip--desktop">Space 开始 · A/D 或 ←/→ 转向 · Esc 暂停</span>
+        <span class="status-strip--mobile">触屏 · 点击屏幕两侧转向 · 按钮开始</span>
+      </div>
+
+      <section class="overlay-backdrop" data-role="overlay">
+        <div class="overlay-card">
+          <p class="overlay-kicker" data-role="overlay-kicker">Snake FPS</p>
+          <h1 class="overlay-title" data-role="overlay-title">第一人称 3D 贪吃蛇</h1>
+          <p class="overlay-message" data-role="overlay-message">
+            Space 开始 · A/D 或 ←/→ 转向 · Esc 暂停
+          </p>
+          <p class="overlay-message--mobile" style="display:none" data-role="overlay-message-mobile">
+            点击「开始游戏」按钮或点击屏幕开始 · 点击屏幕两侧左右转
+          </p>
+          <p class="overlay-summary" data-role="overlay-summary">
+            在开放平面里持续吃食物，别撞墙，也别撞到自己。
+          </p>
+          <p class="overlay-summary--mobile" style="display:none" data-role="overlay-summary-mobile">
+          </p>
+          <div class="overlay-controls">
+            <button data-role="overlay-primary-action" aria-label="开始游戏" class="overlay-btn overlay-btn--primary">开始游戏</button>
+            <span>A / D · 左右转</span>
+            <span>Esc · 暂停 / 恢复</span>
+          </div>
+          <div class="overlay-controls--mobile">
+            <button data-role="overlay-primary-action" aria-label="开始游戏" class="overlay-btn overlay-btn--primary">开始游戏</button>
+            <span>点击屏幕两侧 · 左右转</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
