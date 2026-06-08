@@ -30,6 +30,9 @@ defaults:
     values:
       layout: default
       category_label: 读书笔记
+include:
+  - snake-fps
+
 exclude:
   - vendor
   - tmp
